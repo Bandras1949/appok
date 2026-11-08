@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bánky András – A belső csend felé</title>
+<meta name="description" content="Élő, soha nem ismétlődő látvány zenével: Kaleidoszkóp és Mandala. Próbáld ki ingyen.">
+<meta property="og:title" content="Bánky András – A belső csend felé">
+<meta property="og:description" content="Meditációs és relaxációs alkalmazások: Kaleidoszkóp és Mandala. Havonta új minták. Próbáld ki ingyen.">
+<meta property="og:image" content="mandala.png">
+<meta name="theme-color" content="#0B0B0C">
+<link rel="icon" href="mandala.png">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#D4AF37;--gold2:#C9B37A;--ivory:#F2EAD8;--ink:#0B0B0C;--card:#141416;--line:rgba(212,175,55,.3)}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--ink);color:var(--ivory);font:500 19px/1.45 'Cormorant Garamond',Georgia,serif}
+body{padding:0 max(16px,env(safe-area-inset-left)) 40px max(16px,env(safe-area-inset-right))}
+.wrap{max-width:980px;margin:0 auto}
+header{text-align:center;padding:48px 0 18px;position:relative}
+h1{margin:0;font:600 clamp(30px,6vw,56px)/1.15 'Cormorant Garamond',Georgia,serif;letter-spacing:.02em;color:var(--gold)}
+.al2{margin-top:8px;font:600 clamp(18px,2.4vw,23px) 'Cormorant Garamond',Georgia,serif;letter-spacing:.06em;color:var(--ivory)}
+.al{margin:14px auto 0;max-width:900px;font-style:italic;color:var(--gold2);font-size:clamp(18px,2.4vw,23px)}
+.nyelv{position:absolute;right:0;top:14px;display:flex;gap:4px}
+.nyelv button{background:transparent;border:1px solid var(--line);color:var(--gold2);border-radius:8px;padding:4px 10px;font:600 13px Cinzel,Georgia,serif;cursor:pointer}
+.nyelv button.on{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.friss{display:inline-block;margin-top:16px;padding:6px 14px;border:1px solid var(--gold);border-radius:20px;color:var(--gold);font-size:16px}
+.kartyak{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:18px;margin-top:26px}
+.k{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 20px 20px;display:flex;flex-direction:column;gap:12px}
+.k.cs{border-color:var(--gold)}
+.fej{display:flex;align-items:center;gap:14px}
+.fej img{width:64px;height:64px;border-radius:16px;display:block}
+.ikonok{display:flex}.ikonok img:last-child{margin-left:-18px;box-shadow:0 0 0 3px var(--card)}
+h2{margin:0;font:600 21px Cinzel,Georgia,serif;letter-spacing:.06em;color:var(--gold)}
+.cimke{font-style:italic;color:var(--gold2);font-size:16px}
+.k p{margin:0}
+.k ul{margin:0;padding-left:20px}
+.gombok{margin-top:auto;display:flex;flex-direction:column;gap:8px;padding-top:6px}
+.g{display:block;text-align:center;padding:11px 12px;border-radius:11px;text-decoration:none;font:600 17px 'Cormorant Garamond',Georgia,serif;border:1px solid var(--gold);color:var(--gold)}
+.g.fo{background:var(--gold);color:var(--ink)}
+.g.ki{opacity:.55;cursor:default;border-style:dashed}
+.megj{font-size:15px;color:var(--gold2);text-align:center;font-style:italic}
+section.ajandek{margin-top:34px;padding:22px 20px;border:1px solid var(--line);border-radius:18px}
+section.ajandek h2{margin-bottom:6px}
+.lat{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:10px;margin-top:12px}
+.lat a{display:block;padding:12px;border-radius:12px;border:1px solid var(--line);color:var(--ivory);text-decoration:none}
+.lat a b{display:block;font:600 16px Cinzel,Georgia,serif;letter-spacing:.06em;color:var(--gold)}
+.lat a span{font-size:16px;font-style:italic;color:var(--gold2)}
+footer{margin-top:34px;text-align:center;font-size:15px;color:var(--gold2)}
+[data-en]{display:none}
+html[lang="en"] [data-hu]{display:none}
+html[lang="en"] [data-en]{display:revert}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="nyelv"><button id="hu" class="on">HU</button><button id="en">EN</button></div>
+  <h1><span data-hu>Bánky András – A&nbsp;belső&nbsp;csend&nbsp;felé</span><span data-en>András Bánky – Towards&nbsp;Inner&nbsp;Silence</span></h1>
+  <div class="al2"><span data-hu>Meditációs és relaxációs alkalmazások</span><span data-en>Meditation and relaxation apps</span></div>
+  <div class="al"><span data-hu>Élő, soha nem ismétlődő látvány zenével – kikapcsolódásra, megnyugvásra,&nbsp;feltöltődésre.</span><span data-en>Living, never-repeating visuals with music – to unwind, calm down and&nbsp;recharge.</span></div>
+  <div class="friss"><span data-hu>★ Havonta új minták</span><span data-en>★ New patterns every month</span></div>
+</header>
+
+<div class="kartyak">
+  <div class="k">
+    <div class="fej"><img src="kaleidoszkop.png" alt=""><div><h2><span data-hu>KALEIDOSZKÓP</span><span data-en>KALEIDOSCOPE</span></h2><div class="cimke"><span data-hu>örvény · spirál · szövet · hold · tükör</span><span data-en>vortex · spiral · weave · moon · mirror</span></div></div></div>
+    <p><span data-hu>Élő kaleidoszkóp zenével. Örvények, spirálok, szőtt minták, holdak és tükrös Art Deco minták váltják egymást – soha nem ugyanúgy.</span><span data-en>A living kaleidoscope with music. Vortices, spirals, woven patterns, moons and mirrored Art Deco designs follow each other – never the same way twice.</span></p>
+    <ul>
+      <li><span data-hu>Ingyen: a teljes körforgás, hirdetéssel</span><span data-en>Free: the full cycle, with ads</span></li>
+      <li><span data-hu>Előfizetéssel: minden beállítható, hirdetés nélkül, havonta új minták</span><span data-en>Subscription: fully adjustable, ad-free, new patterns monthly</span></li>
+    </ul>
+    <div class="gombok">
+      <a class="g fo" href="https://bandras1949.github.io/kaleidoszkop/" target="_blank" rel="noopener"><span data-hu>Kipróbálom ingyen</span><span data-en>Try it free</span></a>
+      <span class="g ki"><span data-hu>Előfizetés – hamarosan</span><span data-en>Subscribe – coming soon</span></span>
+    </div>
+  </div>
+
+  <div class="k">
+    <div class="fej"><img src="mandala.png" alt=""><div><h2>MANDALA</h2><div class="cimke"><span data-hu>forog · lélegzik · újjáépül</span><span data-en>turns · breathes · is reborn</span></div></div></div>
+    <p><span data-hu>Lassan forgó, lélegző Art Deco mandala hangtálzenével. Időnként elsöpri önmagát, mint a tibeti szerzetesek homokmandalája, aztán újjáépül.</span><span data-en>A slowly turning, breathing Art Deco mandala with singing-bowl music. From time to time it sweeps itself away, like a Tibetan sand mandala, and is born again.</span></p>
+    <ul>
+      <li><span data-hu>Ingyen: próbaváltozat, alapbeállításokkal</span><span data-en>Free: trial version with default settings</span></li>
+      <li><span data-hu>Előfizetéssel: színpár, tükör, zene, söprés szabadon, havonta új minták</span><span data-en>Subscription: colours, mirrors, music and the sweep your way, new patterns monthly</span></li>
+    </ul>
+    <div class="gombok">
+      <a class="g fo" href="https://bandras1949.github.io/mandala/" target="_blank" rel="noopener"><span data-hu>Kipróbálom ingyen</span><span data-en>Try it free</span></a>
+      <span class="g ki"><span data-hu>Előfizetés – hamarosan</span><span data-en>Subscribe – coming soon</span></span>
+    </div>
+  </div>
+
+  <div class="k cs">
+    <div class="fej"><div class="ikonok"><img src="kaleidoszkop.png" alt=""><img src="mandala.png" alt=""></div><div><h2><span data-hu>MINDKETTŐ</span><span data-en>BOTH</span></h2><div class="cimke"><span data-hu>Kaleidoszkóp + Mandala, kedvezménnyel</span><span data-en>Kaleidoscope + Mandala, discounted</span></div></div></div>
+    <p><span data-hu>A két app együtt, olcsóbban, mint külön-külön. Egyetlen licenckulcs mindkettőt megnyitja, és mindkettőben havonta új minták érkeznek.</span><span data-en>Both apps together, for less than separately. One licence key opens both, and both get new patterns every month.</span></p>
+    <div class="gombok">
+      <span class="g ki"><span data-hu>Csomag-előfizetés – hamarosan</span><span data-en>Bundle subscription – coming soon</span></span>
+    </div>
+  </div>
+</div>
+
+<p class="megj"><span data-hu>A licenckulcsot az appban, a ⚙ beállítópanelen add meg.</span><span data-en>Enter your licence key in the app, on the ⚙ settings panel.</span></p>
+
+<section class="ajandek">
+  <h2><span data-hu>Ajándék: LÁTOMÁSOK</span><span data-en>A gift: VISIONS</span></h2>
+  <div><span data-hu>Négy rövid élmény, ingyen, beállítás nélkül. Koppints, és nézd.</span><span data-en>Four short experiences, free, nothing to set. Tap and watch.</span></div>
+  <div class="lat">
+    <a href="https://bandras1949.github.io/kaleidoszkop/alom.html" target="_blank" rel="noopener"><b><span data-hu>ÁLOM</span><span data-en>DREAM</span></b><span><span data-hu>foszlányok elalvás előtt</span><span data-en>fragments before sleep</span></span></a>
+    <a href="https://bandras1949.github.io/kaleidoszkop/korforgas.html" target="_blank" rel="noopener"><b><span data-hu>KÖRFORGÁS</span><span data-en>CYCLE</span></b><span><span data-hu>egy fa, egy pad, egy év</span><span data-en>one tree, one bench, one year</span></span></a>
+    <a href="https://bandras1949.github.io/kaleidoszkop/meditacio.html" target="_blank" rel="noopener"><b><span data-hu>MEDITÁCIÓ</span><span data-en>MEDITATION</span></b><span><span data-hu>ködös tó, hangtálak</span><span data-en>misty lake, singing bowls</span></span></a>
+    <a href="https://bandras1949.github.io/kaleidoszkop/tuzijatek.html" target="_blank" rel="noopener"><b><span data-hu>TŰZIJÁTÉK</span><span data-en>FIREWORKS</span></b><span><span data-hu>élő tűzijáték a képernyőn</span><span data-en>live fireworks on your screen</span></span></a>
+  </div>
+</section>
+
+<footer>© Bánky András · Brillidea Kft.</footer>
+</div>
+<script>
+(function () {
+  const set = l => { document.documentElement.lang = l; document.getElementById('hu').classList.toggle('on', l === 'hu'); document.getElementById('en').classList.toggle('on', l === 'en'); try { localStorage.setItem('appok-nyelv', l); } catch (e) {} };
+  let l = null; try { l = localStorage.getItem('appok-nyelv'); } catch (e) {}
+  if (!l) l = (navigator.language || 'hu').toLowerCase().startsWith('hu') ? 'hu' : 'en';
+  set(l);
+  document.getElementById('hu').onclick = () => set('hu');
+  document.getElementById('en').onclick = () => set('en');
+})();
+</script>
+</body>
+</html>
