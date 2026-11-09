@@ -121,6 +121,7 @@ html[lang="en"] [data-en]{display:revert}
   set(l);
   document.getElementById('hu').onclick = () => set('hu');
   document.getElementById('en').onclick = () => set('en');
+  window.addEventListener('pageshow', e => { if (e.persisted) location.reload(); });   // Vissza gombbal visszatérve friss állapot (mint az F5)
 })();
 </script>
 <script>
