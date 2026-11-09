@@ -58,7 +58,7 @@ html[lang="en"] [data-en]{display:revert}
 <header>
   <h1><span data-hu>Bánky András – A&nbsp;belső&nbsp;csend&nbsp;felé</span><span data-en>András Bánky – Towards&nbsp;Inner&nbsp;Silence</span></h1>
   <div class="al2"><span data-hu>Meditációs és relaxációs alkalmazások</span><span data-en>Meditation and relaxation apps</span></div>
-  <div class="al"><span data-hu>Élő, soha nem ismétlődő látvány zenével – kikapcsolódásra, megnyugvásra,&nbsp;feltöltődésre.</span><span data-en>Living, never-repeating visuals with music – to unwind, calm down and&nbsp;recharge.</span></div>
+  <div class="al"><span data-hu>Élő, folyton változó látvány, zenei kísérettel – kikapcsolódásra, megnyugvásra,&nbsp;feltöltődésre.</span><span data-en>Living, ever-changing visuals with a musical accompaniment – to unwind, calm down and&nbsp;recharge.</span></div>
   <div class="sor2"><div class="friss"><span data-hu>★ Havonta új minták</span><span data-en>★ New patterns every month</span></div><div class="nyelv"><button id="hu" class="on">HU</button><button id="en">EN</button></div></div>
 </header>
 
@@ -130,11 +130,6 @@ document.addEventListener('click', e => {
   const a = e.target.closest('a[target="_blank"]'); if (!a) return;
   e.preventDefault();
   let u = a.href;
-  if (!/github\.io$/.test(location.hostname)) {   // fejlesztői vászon: a projekt saját példányai
-    const G = 'https://bandras1949.github.io/', R = [[G + 'appok/', '../appok/index.html'], [G + 'mandala/', '../mandala-app/index.html'], [G + 'kaleidoszkop/mandala-promo/', '../mandala-promo/index.html'], [G + 'kaleidoszkop/', '../web/']];
-    for (const [g, r] of R) if (u.startsWith(g)) { u = new URL(r + (u.slice(g.length) || (r.endsWith('/') ? 'Kaleidoszkop.dc.html' : '')), location.href).href; break; }
-    location.href = u; return;   // a vászon fájljai csak a kereten belül nyithatók meg
-  }
   let w = null; try { w = window.open(u, '_blank'); } catch (x) {}
   if (w) { try { w.opener = null; } catch (x) {} } else location.href = u;
 }, true);
