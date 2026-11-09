@@ -21,10 +21,11 @@ header{text-align:center;padding:48px 0 18px;position:relative}
 h1{margin:0;font:600 clamp(30px,6vw,56px)/1.15 'Cormorant Garamond',Georgia,serif;letter-spacing:.02em;color:var(--gold)}
 .al2{margin-top:8px;font:600 clamp(18px,2.4vw,23px) 'Cormorant Garamond',Georgia,serif;letter-spacing:.06em;color:var(--ivory)}
 .al{margin:14px auto 0;max-width:900px;font-style:italic;color:var(--gold2);font-size:clamp(18px,2.4vw,23px)}
-.nyelv{position:absolute;right:0;top:14px;display:flex;gap:4px}
-.nyelv button{background:transparent;border:1px solid var(--line);color:var(--gold2);border-radius:8px;padding:4px 10px;font:600 13px Cinzel,Georgia,serif;cursor:pointer}
+.sor2{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:12px;margin-top:16px}
+.nyelv{display:flex;gap:6px}
+.nyelv button{background:transparent;border:1px solid var(--line);color:var(--gold2);border-radius:8px;padding:7px 14px;font:600 13px Cinzel,Georgia,serif;cursor:pointer}
 .nyelv button.on{background:var(--gold);color:var(--ink);border-color:var(--gold)}
-.friss{display:inline-block;margin-top:16px;padding:6px 14px;border:1px solid var(--gold);border-radius:20px;color:var(--gold);font-size:16px}
+.friss{display:inline-block;padding:6px 14px;border:1px solid var(--gold);border-radius:20px;color:var(--gold);font-size:16px}
 .kartyak{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:18px;margin-top:26px}
 .k{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 20px 20px;display:flex;flex-direction:column;gap:12px}
 .k.cs{border-color:var(--gold)}
@@ -55,11 +56,10 @@ html[lang="en"] [data-en]{display:revert}
 <body>
 <div class="wrap">
 <header>
-  <div class="nyelv"><button id="hu" class="on">HU</button><button id="en">EN</button></div>
   <h1><span data-hu>Bánky András – A&nbsp;belső&nbsp;csend&nbsp;felé</span><span data-en>András Bánky – Towards&nbsp;Inner&nbsp;Silence</span></h1>
   <div class="al2"><span data-hu>Meditációs és relaxációs alkalmazások</span><span data-en>Meditation and relaxation apps</span></div>
   <div class="al"><span data-hu>Élő, soha nem ismétlődő látvány zenével – kikapcsolódásra, megnyugvásra,&nbsp;feltöltődésre.</span><span data-en>Living, never-repeating visuals with music – to unwind, calm down and&nbsp;recharge.</span></div>
-  <div class="friss"><span data-hu>★ Havonta új minták</span><span data-en>★ New patterns every month</span></div>
+  <div class="sor2"><div class="friss"><span data-hu>★ Havonta új minták</span><span data-en>★ New patterns every month</span></div><div class="nyelv"><button id="hu" class="on">HU</button><button id="en">EN</button></div></div>
 </header>
 
 <div class="kartyak">
@@ -122,6 +122,21 @@ html[lang="en"] [data-en]{display:revert}
   document.getElementById('hu').onclick = () => set('hu');
   document.getElementById('en').onclick = () => set('en');
 })();
+</script>
+<script>
+// Ha a környezet (pl. beágyazó keret) nem enged új lapot, a link ugyanitt nyílik meg.
+document.addEventListener('click', e => {
+  const a = e.target.closest('a[target="_blank"]'); if (!a) return;
+  e.preventDefault();
+  let u = a.href;
+  if (!/github\.io$/.test(location.hostname)) {   // fejlesztői vászon: a projekt saját példányai
+    const G = 'https://bandras1949.github.io/', R = [[G + 'appok/', '../appok/index.html'], [G + 'mandala/', '../mandala-app/index.html'], [G + 'kaleidoszkop/mandala-promo/', '../mandala-promo/index.html'], [G + 'kaleidoszkop/', '../web/']];
+    for (const [g, r] of R) if (u.startsWith(g)) { u = new URL(r + (u.slice(g.length) || (r.endsWith('/') ? 'Kaleidoszkop.dc.html' : '')), location.href).href; break; }
+    location.href = u; return;   // a vászon fájljai csak a kereten belül nyithatók meg
+  }
+  let w = null; try { w = window.open(u, '_blank'); } catch (x) {}
+  if (w) { try { w.opener = null; } catch (x) {} } else location.href = u;
+}, true);
 </script>
 </body>
 </html>
